@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://DefaultNamespace" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://DefaultNamespace" xmlns:intf="http://DefaultNamespace" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://DefaultNamespace" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="addNum">
+    <complexType>
+     <sequence>
+      <element name="a" type="xsd:float"/>
+      <element name="b" type="xsd:float"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addNumResponse">
+    <complexType>
+     <sequence>
+      <element name="addNumReturn" type="xsd:float"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="divNum">
+    <complexType>
+     <sequence>
+      <element name="a" type="xsd:float"/>
+      <element name="b" type="xsd:float"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="divNumResponse">
+    <complexType>
+     <sequence>
+      <element name="divNumReturn" type="xsd:float"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="subNum">
+    <complexType>
+     <sequence>
+      <element name="a" type="xsd:float"/>
+      <element name="b" type="xsd:float"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="subNumResponse">
+    <complexType>
+     <sequence>
+      <element name="subNumReturn" type="xsd:float"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="mulNum">
+    <complexType>
+     <sequence>
+      <element name="a" type="xsd:float"/>
+      <element name="b" type="xsd:float"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="mulNumResponse">
+    <complexType>
+     <sequence>
+      <element name="mulNumReturn" type="xsd:float"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="addNumResponse">
+
+      <wsdl:part element="impl:addNumResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addNumRequest">
+
+      <wsdl:part element="impl:addNum" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="mulNumResponse">
+
+      <wsdl:part element="impl:mulNumResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="divNumResponse">
+
+      <wsdl:part element="impl:divNumResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="divNumRequest">
+
+      <wsdl:part element="impl:divNum" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="subNumRequest">
+
+      <wsdl:part element="impl:subNum" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="subNumResponse">
+
+      <wsdl:part element="impl:subNumResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="mulNumRequest">
+
+      <wsdl:part element="impl:mulNum" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="SimpleCal">
+
+      <wsdl:operation name="addNum">
+
+         <wsdl:input message="impl:addNumRequest" name="addNumRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:addNumResponse" name="addNumResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="divNum">
+
+         <wsdl:input message="impl:divNumRequest" name="divNumRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:divNumResponse" name="divNumResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="subNum">
+
+         <wsdl:input message="impl:subNumRequest" name="subNumRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:subNumResponse" name="subNumResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="mulNum">
+
+         <wsdl:input message="impl:mulNumRequest" name="mulNumRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:mulNumResponse" name="mulNumResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="SimpleCalSoapBinding" type="impl:SimpleCal">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="addNum">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addNumRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addNumResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="divNum">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="divNumRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="divNumResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="subNum">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="subNumRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="subNumResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="mulNum">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="mulNumRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="mulNumResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="SimpleCalService">
+
+      <wsdl:port binding="impl:SimpleCalSoapBinding" name="SimpleCal">
+
+         <wsdlsoap:address location="http://localhost:8080/SOAP-WS-Example/services/SimpleCal"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
