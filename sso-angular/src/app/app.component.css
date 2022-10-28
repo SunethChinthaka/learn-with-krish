@@ -1,0 +1,15 @@
+.card {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+    margin-top: 60px;
+}
+
+.btn-success {
+
+    margin-top: 30px;
+}
+
+.btn-secondary {
+    margin-top: 30px;
+}
